@@ -47,7 +47,7 @@ function getUserRepositories(userName) {
             repositoriesItens += `<li><a href="${repo.html_url}" target=_blank>${repo.name}</a></li>`
         });
 
-        document.querySelector('.profile-data').innerHTML += `<div class ="reposirtories section">
+        document.querySelector('.profile-data').innerHTML += `<div class ="repositories section">
             <h2>Repositories</h2>
             <ul>${repositoriesItens}</ul>
         </div>`
