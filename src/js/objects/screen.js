@@ -10,6 +10,8 @@ const screen = {
                          <h1>${
                            user.name ?? "Não possui nome cadastrado😥"
                          } </h1>
+                         <p>Seguidores ${user.followers}</p>
+                         <p>Seguindo <span>${user.following}<span></p>
                          <p>${user.bio ?? "Não possui bio cadastrada😥"}</p>
              </div>
         <div/>`;
@@ -19,12 +21,12 @@ const screen = {
       (repo) =>
         (respositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`)
     );
-    console.log(respositoriesItens);
 
     if (user.repositories.length > 0) {
       this.userProfile.innerHTML += `<div class="repositories section">
                                         <h2>Repositórios</h2>
-                                        <ul>${respositoriesItens}</ul>`;
+                                        <ul>${respositoriesItens}</ul>
+                                        </div>`;
     }
   },
 
