@@ -121,8 +121,6 @@ main {
   line-height: 23px;
 }
 
-/* REPOSITORIES */
-
 .container .profile-data .repositories h2{
   margin-bottom: 30px;
   text-align: center;
@@ -144,7 +142,7 @@ main {
 }
 
 .container .profile-data .repositories ul li a:hover{
-  background-color:hotpink;
+  background-color: hotpink;
   color: #fff
 }
 
@@ -156,6 +154,24 @@ main {
 .container .profile-data.hide{
   display: none;
 }
+
+.container .profile-data .events ul li a {
+  padding: 20px;
+  margin: 20px;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+
+.container .profile-data .events ul li a:hover{
+  border-radius: 7px;
+  background-color: hotpink;
+  color: #fff
+}
+
+.container .profile-data .events span {
+  font-weight: 600;
+}
+
 
 @media (max-width: 1280px) {
   .container {
