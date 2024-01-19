@@ -32,7 +32,6 @@ async function getUserData(userName) {
 
   const userResponse = await getUser(userName)
 
-
   if (userResponse.message === "Not Found") {
     screen.renderNotFound()
     return
