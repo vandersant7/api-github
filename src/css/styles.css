@@ -134,7 +134,7 @@ main {
   justify-content: center;
 }
 
-.container .profile-data .repositories ul li a{
+.container .profile-data .repositories ul li a {
   padding: 20px;
   border: 1px solid grey;  
   margin: 20px;
@@ -146,6 +146,11 @@ main {
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;
   color: #fff
+}
+
+.container .profile-data .repositories span {
+  border-radius: 7px;
+  background-color: blueviolet;
 }
 
 .container .profile-data.hide{
