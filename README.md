@@ -1,6 +1,6 @@
 **GitHub User Data Fetcher**
 
-Este é um projeto simples que utiliza HTML, CSS e JavaScript para criar uma interface interativa que permite aos usuários buscar e exibir dados de outros usuários do GitHub. A aplicação consome a API pública do GitHub para obter informações sobre um usuário específico.
+Este projeto é um desafio do curso DevQuest que utiliza HTML, CSS e JavaScript para criar uma interface interativa que permite aos usuários buscar e exibir dados de outros usuários do GitHub. A aplicação consome a API pública do GitHub para obter informações sobre um usuário específico.
 
 ### Como Usar
 
