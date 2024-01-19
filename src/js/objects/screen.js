@@ -8,18 +8,24 @@ const screen = {
                         }" alt="Foto do perfil do usuário" />
                         <div class="data">
                          <h1>${
-                           user.name ?? "Não possui nome cadastrado😥"
+                           user.name ?? "Não possui nome cadastrado😕"
                          } </h1>
-                         <p>Seguidores ${user.followers}</p>
-                         <p>Seguindo <span>${user.following}<span></p>
-                         <p>${user.bio ?? "Não possui bio cadastrada😥"}</p>
+                         <p><span>Seguidores</span> ${user.followers}</p>
+                         <p><span>Seguindo</span> ${user.following}</p>
+                         <p>${user.bio ?? "Não possui bio cadastrada🥹"}</p>
              </div>
         <div/>`;
 
     let respositoriesItens = "";
     user.repositories.forEach(
       (repo) =>
-        (respositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`)
+        (respositoriesItens += `<li>
+                                  <a href="${repo.html_url}" target="_blank">${repo.name}
+                                  <br><span>🍴${repo.forks_count}</span>
+                                  <span>🌟${repo.stargazers_count}</span>
+                                  <span>👀${repo.watchers_count}</span>
+                                  <br> 👨‍💻👩‍💻${repo.language}</a>
+                                </li>`)
     );
 
     if (user.repositories.length > 0) {
@@ -29,6 +35,17 @@ const screen = {
                                         </div>`;
     }
   },
+
+  let eventsData = "";
+    user.events.forEach(
+      (event) =>
+        if (event.type === 'PushEvent' || event.type === 'CreateEvent') {
+          eventsData += `<li><b>${event.repo.name}</b> - ${event.payload.commits[0].message}</li>`
+        }
+    );
+
+    
+    }
 
   renderNotFound() {
     this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>";
