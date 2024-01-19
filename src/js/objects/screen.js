@@ -12,40 +12,50 @@ const screen = {
                          } </h1>
                          <p><span>Seguidores</span> ${user.followers}</p>
                          <p><span>Seguindo</span> ${user.following}</p>
-                         <p>${user.bio ?? "Não possui bio cadastrada🥹"}</p>
+                         <p>${user.bio ?? "Não possui bio cadastrada😞"}</p>
              </div>
-        <div/>`;
+        </div>`;
 
-    let respositoriesItens = "";
+    let repositoriesItems = "";
     user.repositories.forEach(
       (repo) =>
-        (respositoriesItens += `<li>
+        (repositoriesItems += `<li>
                                   <a href="${repo.html_url}" target="_blank">${repo.name}
                                   <br><span>🍴${repo.forks_count}</span>
                                   <span>🌟${repo.stargazers_count}</span>
                                   <span>👀${repo.watchers_count}</span>
-                                  <br> 👨‍💻👩‍💻${repo.language}</a>
+                                  <br> 📌${repo.language}</a>
                                 </li>`)
     );
 
     if (user.repositories.length > 0) {
       this.userProfile.innerHTML += `<div class="repositories section">
                                         <h2>Repositórios</h2>
-                                        <ul>${respositoriesItens}</ul>
-                                        </div>`;
+                                        <ul>${repositoriesItems}</ul>
+                                      </div>`;
     }
-  },
 
-  let eventsData = "";
-    user.events.forEach(
-      (event) =>
-        if (event.type === 'PushEvent' || event.type === 'CreateEvent') {
-          eventsData += `<li><b>${event.repo.name}</b> - ${event.payload.commits[0].message}</li>`
+    let lastEvents = "";
+        user.events.forEach(event => {
+            if (event.type === 'PushEvent') {
+                lastEvents += `<li>
+                                    <a href="${event.repo.url}" target="_blank"><span>${event.repo.name}</span> - ${event.payload.commits[0].message}</a>
+                                </li>`
+            } else {
+                lastEvents += `<li>
+                                    <a href="${event.repo.url}" target="_blank"><span>${event.repo.name}</span> - Nenhum evento para exibir.</a>
+                                </li>`
+            }
+        })
+        
+        if (user.events.length > 0) {
+            this.userProfile.innerHTML += `<div class="events section">
+                                                <h2>Últimos eventos</h2>
+                                                <ul>${lastEvents}</ul>
+                                            </div>`
         }
-    );
-
     
-    }
+  },
 
   renderNotFound() {
     this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>";
