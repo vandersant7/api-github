@@ -24,7 +24,7 @@ const screen = {
                                   <br><span>🍴${repo.forks_count}</span>
                                   <span>🌟${repo.stargazers_count}</span>
                                   <span>👀${repo.watchers_count}</span>
-                                  <br> 📌${repo.language}</a>
+                                  <br> 👨‍💻${repo.language}</a>
                                 </li>`)
     );
 
