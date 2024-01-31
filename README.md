@@ -1,28 +1,28 @@
-**GitHub User Data Fetcher**
+# Projeto GitHub User Search
 
-Este projeto é um desafio do curso DevQuest que utiliza HTML, CSS e JavaScript para criar uma interface interativa que permite aos usuários buscar e exibir dados de outros usuários do GitHub. A aplicação consome a API pública do GitHub para obter informações sobre um usuário específico.
+Este projeto foi desenvolvido usando as tecnologias HTML, CSS e JavaScript. O objetivo do projeto é permitir que os usuários pesquisem por outros usuários do GitHub e vejam informações como seguidores, seguindo, forks, estrelas, 10 repositórios mais recentes e atividades recentes.
 
-### Como Usar
+## Como funciona
 
-1. Faça um fork ou download deste projeto.
+O projeto usa a API do GitHub para buscar usuários com base em uma consulta de pesquisa. Os resultados da pesquisa são exibidos em uma lista, com informações como nome de usuário, foto de perfil e número de seguidores. Quando um usuário é selecionado, as informações detalhadas do usuário são exibidas, incluindo o número de seguidores, seguindo, forks, estrelas, 10 repositórios mais recentes e atividades recentes.
 
-[Veja a documentação do GitHub](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
+## Tecnologias usadas
 
+O projeto foi desenvolvido usando as seguintes tecnologias:
 
-2. Abra o arquivo `index.html` em seu navegador da web favorito.
+- HTML
+- CSS
+- JavaScript
 
-3. Na página, insira o nome de usuário do GitHub na caixa de pesquisa e clique no botão "Buscar".
+## Como executar o projeto
 
-### Estrutura do Projeto
+Para executar o projeto, siga estas etapas:
 
-- **index.html**: Contém a estrutura HTML básica da página, incluindo os campos de entrada e exibição dos dados do usuário.
+1. Clone o repositório do projeto.
+2. Abra o arquivo `index.html` em um navegador da web.
+3. Use a barra de pesquisa para pesquisar usuários do GitHub.
+4. Ou, se preferir, acesse o [Deploy](https://github-user-search-ten-liart.vercel.app/).
 
-- **styles.css**: Fornece o estilo para tornar a página mais atraente e fácil de usar.
+## Conclusão
 
-- **index.js**: Contém a lógica JavaScript para buscar dados do GitHub e exibi-los dinamicamente na página.
-
-### Personalização
-
-Sinta-se à vontade para personalizar o projeto de acordo com suas necessidades. Você pode adicionar mais informações do usuário, ajustar o layout, ou até mesmo incorporar outras funcionalidades utilizando a API do GitHub.
-
-
+Este projeto foi uma ótima oportunidade para aprender mais sobre as tecnologias HTML, CSS e JavaScript, bem como a API do GitHub. 
